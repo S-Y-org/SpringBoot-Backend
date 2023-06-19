@@ -87,6 +87,14 @@ The lambda expression syntax ()-> allows you to define a block of code as an inl
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @DeleteMapping("/deleteAll")
+    //build DELETE ALL employee REST API
+    public ResponseEntity<Employee> deleteAllEmployees() {
+        employeeRepository.deleteAll();
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
 
 
